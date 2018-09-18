@@ -1,0 +1,15 @@
+{% extends "frame.html" %}
+
+{% block title %}
+    Test a DNA sample
+{% endblock title %}
+
+{% block content %}
+<div class="nav-margin">
+    <h2>Please enter a DNA sample to test</h2>
+    <form action="/result" method="post">
+        <textarea rows="4" cols="150" name="dna">Enter your DNA sample here</textarea><br>
+        <input type="submit" value="Test DNA!">
+    </form>
+</div>
+{% endblock content %}

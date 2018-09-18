@@ -1,0 +1,15 @@
+{% extends "frame.html" %}
+
+{% block title %}
+    Question
+{% endblock title %}
+
+{% block content %}
+    The Question:
+<p>What is the capital of {{ country }}?</p>
+<form action="/answer" method="post">
+    <input name="answer">
+    <input type="hidden" name="country" value="{{ country }}">
+    <input type="submit" value="Answer!">
+</form>
+{% endblock content %}
